@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="48" viewBox="0 0 160 48" role="img" aria-label="Proximi India">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+  <circle cx="24" cy="24" r="22" fill="url(#g2)"/>
+  <text x="24" y="31" font-family="Fraunces, Georgia, serif" font-style="italic" font-weight="700" font-size="20" fill="#FBF9F5" text-anchor="middle" letter-spacing="-1">PX</text>
+  <text x="56" y="31" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="22" fill="#1c1917" letter-spacing="-0.3">Proximi</text>
+  <text x="140" y="31" font-family="Plus Jakarta Sans, sans-serif" font-weight="500" font-size="12" fill="#57534e" letter-spacing="1">IN</text>
+</svg>

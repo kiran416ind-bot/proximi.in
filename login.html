@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in — Proximi India</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span class="logo-mark">P</span> Proximi <span style="color:var(--muted);font-weight:500;font-size:13px;margin-left:2px;">India</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+        <a href="index.html#waitlist" class="btn btn-primary btn-sm">Join waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="auth-wrap">
+    <div class="auth-card">
+      <h1 class="display" style="font-size:30px;">Welcome <em>back</em>.</h1>
+      <p class="sub">Log in to your Proximi India workspace.</p>
+      <div class="auth-social">
+        <button class="btn btn-ghost" style="flex:1;">Continue with Google</button>
+      </div>
+      <div class="auth-divider">or with email</div>
+      <form onsubmit="event.preventDefault(); alert('Thanks! (Prototype — wire to auth)');">
+        <div class="field"><label>Email</label><input type="email" required placeholder="you@company.com" /></div>
+        <div class="field"><label>Password</label><input type="password" required placeholder="••••••••" /></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+          <label style="display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted);margin:0;"><input type="checkbox" /> Remember me</label>
+          <a href="#" style="font-size:13px;color:var(--secondary);">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Log in →</button>
+      </form>
+      <p class="text-center small mt-3">Don't have an account? <a href="login.html" style="color:var(--secondary);font-weight:600;">Sign up</a></p>
+      <p class="text-center small" style="margin-top:8px;">Pre-launch: accounts open at launch. <a href="index.html#waitlist" style="color:var(--secondary);">Join the waitlist →</a></p>
+    </div>
+  </main>
+
+  <footer class="footer" style="margin-top:0;">
+    <div class="container">
+      <div class="footer-bottom"><span>© 2026 Proximi India. All rights reserved.</span><span>Made with ♥ in India</span></div>
+    </div>
+  </footer>
+</body>
+</html>

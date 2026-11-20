@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logo Options — Proximi India</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .logo-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    @media (max-width: 900px) { .logo-grid { grid-template-columns: 1fr; } }
+    .logo-option { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; text-align: center; }
+    .logo-option .preview { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; display: grid; place-items: center; min-height: 100px; }
+    .logo-option .preview.dark { background: var(--text); }
+    .logo-option h3 { margin: 0 0 6px; font-size: 18px; }
+    .logo-option p { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+    .logo-option .tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
+    .swatch-row { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+    .swatch { width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span class="logo-mark">P</span> Proximi <span style="color:var(--muted);font-weight:500;font-size:13px;margin-left:2px;">India</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+        <a href="index.html#waitlist" class="btn btn-primary btn-sm">Join waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section" style="padding-top:60px;">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Logo options</span>
+          <h1 class="display">Pick your <em>mark</em>.</h1>
+          <p>Three directions. Each works on light and dark backgrounds. Tell me which to keep (or mix elements).</p>
+        </div>
+
+        <div class="logo-grid">
+          <div class="logo-option">
+            <span class="tag">Option A · Primary wordmark</span>
+            <div class="preview"><img src="logo-primary.svg" alt="Primary logo" style="max-width:100%;height:auto;" /></div>
+            <div class="preview dark"><img src="logo-primary.svg" alt="Primary logo dark" style="max-width:100%;height:auto;filter:invert(1) hue-rotate(180deg);" /></div>
+            <h3>Warm mark + Fraunces wordmark</h3>
+            <p>Rounded-square gradient mark with italic "P", Fraunces "Proximi", uppercase "INDIA". Closest to the current site header. Editorial, confident.</p>
+          </div>
+
+          <div class="logo-option">
+            <span class="tag">Option B · Monogram</span>
+            <div class="preview"><img src="logo-monogram.svg" alt="Monogram logo" style="max-width:100%;height:auto;" /></div>
+            <div class="preview dark"><img src="logo-monogram.svg" alt="Monogram logo dark" style="max-width:100%;height:auto;filter:invert(1) hue-rotate(180deg);" /></div>
+            <h3>PX monogram</h3>
+            <p>Circular gradient badge with italic "PX" ligature. Compact — works well as app icon, favicon, and social avatar.</p>
+          </div>
+
+          <div class="logo-option">
+            <span class="tag">Option C · Spark mark</span>
+            <div class="preview"><img src="logo-spark.svg" alt="Spark logo" style="max-width:100%;height:auto;" /></div>
+            <div class="preview dark"><img src="logo-spark.svg" alt="Spark logo dark" style="max-width:100%;height:auto;filter:invert(1) hue-rotate(180deg);" /></div>
+            <h3>Dark mark + rising spark</h3>
+            <p>Near-black rounded square with a warm rising spark/arrow (proximity + growth). More tech-forward, stands out on light backgrounds.</p>
+          </div>
+        </div>
+
+        <div class="section-head" style="margin-top:60px;">
+          <span class="eyebrow">Color palette</span>
+          <h2 class="display" style="font-size:32px;">Brand <em>colors</em>.</h2>
+        </div>
+        <div class="swatch-row">
+          <div class="swatch" style="background:#FBF9F5;" title="#FBF9F5 canvas"></div>
+          <div class="swatch" style="background:#1c1917;" title="#1c1917 text"></div>
+          <div class="swatch" style="background:#ea580c;" title="#ea580c accent"></div>
+          <div class="swatch" style="background:#fb923c;" title="#fb923c accent light"></div>
+          <div class="swatch" style="background:#9a3412;" title="#9a3412 accent dark"></div>
+          <div class="swatch" style="background:#4338ca;" title="#4338ca secondary"></div>
+          <div class="swatch" style="background:#57534e;" title="#57534e muted"></div>
+          <div class="swatch" style="background:#e7e5e4;" title="#e7e5e4 border"></div>
+        </div>
+
+        <div class="text-center mt-4">
+          <p class="small">Tell me which option to keep (or mix elements), and I'll update the site header/footer and social avatars to use it.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="color:#fff;margin-bottom:12px;"><span class="logo-mark" style="background:#fff;color:var(--text);">P</span> Proximi India</div>
+          <p style="color:#a8a29e;font-size:14px;max-width:320px;">Your pre-launch marketing team, in a box. Built for India.</p>
+        </div>
+        <div><h4>Product</h4><ul><li><a href="pricing.html">Pricing</a></li><li><a href="index.html#waitlist">Waitlist</a></li><li><a href="login.html">Log in</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Proximi India. All rights reserved.</span><span>Made with ♥ in India</span></div>
+    </div>
+  </footer>
+</body>
+</html>
