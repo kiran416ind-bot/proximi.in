@@ -1,0 +1,146 @@
+PROXIMI INDIA — WEBSITE STRUCTURE (plain text)
+================================================
+Generated: 2026-11-20
+Reference: https://coming-soon-93--6ditayqu.preview.emergentagent.com (Adda coming-soon)
+Stack: Static HTML + Tailwind CSS (CDN) + vanilla JS
+Repo: https://github.com/kiran416ind-bot/proximi.in
+
+--------------------------------------------------
+1. SITE MAP (pages)
+--------------------------------------------------
+/ (index.html)        Home / coming-soon landing
+/pricing.html         Pricing (4 tiers + FAQ)
+/about.html           About (story, mission, values)
+/blog.html            Blog / resources (post grid + newsletter)
+/contact.html         Contact / demo (form + info)
+/login.html           Login / signup (auth card)
+/logo-showcase.html   Logo options preview (3 variants)
+
+--------------------------------------------------
+2. HOME PAGE (index.html) — aligned to reference
+--------------------------------------------------
+Section order (matches reference bundle.js):
+  1. Navbar (sticky, blurred)
+     - Logo mark (P) + "Proximi India"
+     - Links: Features, Waitlist, Pricing, About
+     - CTAs: Log in, Join waitlist
+  2. Hero
+     - Eyebrow: "Opening soon · India-first" (pulse dot)
+     - H1: "India's new pre-launch marketing layer is opening soon."
+     - Subtext (lede)
+     - Form (heroForm): name, city, email + "Reserve spot" button
+     - Success message (hidden until submit)
+  3. CityMarquee
+     - Scrolling list of Indian cities (Mumbai, Delhi NCR, Bengaluru, ...)
+  4. BentoFeatures (id="features")
+     - Header: "What makes it different" / "Built for founders, not followers."
+     - Grid (lg:grid-cols-12, gap-5):
+       a. Card 1 (col-span-7, h-440): image + live pins overlay
+          - pin list: Waitlist live (Bengaluru), Festival post (Diwali), Interview booked (Mumbai)
+          - "Live pins" badge, H3 "Drop a pin, not a post.", description
+       b. Card 2 (col-span-5, h-440): obsidian ethos card
+          - "The ethos", H3 "Zero duct tape. Zero USD billing. Zero vanity metrics."
+          - description, "Built for showing up, not showing off"
+       c. Card 3 (col-span-5, h-440): image + "City circles"
+          - H3 "Your people, by the clock they keep.", description
+       d. Card 4 (col-span-7, h-440): clay-soft "Ephemeral by design"
+          - "Ephemeral by design", H3 "Invites that vanish at dawn.", description
+          - stacked card mockup, "End-to-end encrypted · Auto-deleted · Never on a feed"
+  5. WhyUnique
+     - "Why it's different" / "Zero followers. Zero feed. Zero performances."
+     - description
+  6. WaitlistSection (id="waitlist")
+     - "Reserve your spot" / "Be first in."
+     - Form (waitlistForm): name, city (row) + email + submit
+     - successMsg (hidden)
+     - Stats: 1,200+ on waitlist / 3 validation questions / ₹999 starting price
+  7. Faq
+     - 4 details/accordion items: free plan, INR billing, plan switching, WhatsApp Business
+  8. Footer
+     - 4-col grid: brand, Product, Company, Legal
+     - bottom bar: copyright + social links (X, Instagram, YouTube)
+
+--------------------------------------------------
+3. OTHER PAGES
+--------------------------------------------------
+pricing.html
+  - Navbar, Hero (small), 4 price cards (Free/Starter/Growth/Agency), FAQ (4 items), Footer
+
+about.html
+  - Navbar, Hero (story), Mission (3 cards), Values (3 items), CTA band, Footer
+
+blog.html
+  - Navbar, Hero, Featured post card, 6 post cards (blog-grid), Newsletter signup, Footer
+
+contact.html
+  - Navbar, Hero, Contact grid (info + form), Footer
+
+login.html
+  - Navbar, Auth card (Google + email form + remember/forgot), Footer
+
+logo-showcase.html
+  - Navbar, 3 logo options (primary/monogram/spark) on light+dark, color swatches, Footer
+
+--------------------------------------------------
+4. DESIGN TOKENS (Tailwind config)
+--------------------------------------------------
+Colors:
+  canvas    #FBF9F5   (page background, warm off-white)
+  ink       #1c1917   (text, dark surfaces)
+  warm      #57534e   (secondary text)
+  faint     #78716c   (tertiary text)
+  clay      #ea580c   (accent / CTA)
+  chai      #fb923c   (accent light)
+  obsidian  #1c1917   (dark card bg)
+  clay-soft #fff7ed    (soft highlight)
+  strongline #d6d3d1  (strong borders)
+  hairline  #e7e5e4   (dividers)
+Fonts:
+  serif     Fraunces (display, italic emphasis)
+  sans      Plus Jakarta Sans (body)
+  mono      JetBrains Mono (eyebrows, codes, tags)
+Radii: rounded-2xl (1.75rem), rounded-full (pills), rounded-lg
+Shadows: shadow-lg on cards
+
+--------------------------------------------------
+5. FORMS & DATA COLLECTION
+--------------------------------------------------
+Method: Web3Forms (https://api.web3forms.com/submit)
+Forms:
+  - heroForm (name, city, email) -> Web3Forms
+  - waitlistForm (name, city, email) -> Web3Forms
+Fields (hidden): access_key, subject, redirect (https://www.proximi.in/thanks), botcheck (honeypot)
+Submission: fetch() POST, inline success message, no page redirect
+Entries: Web3Forms dashboard + email, CSV export
+Access key: embedded in index.html (replace if rotated)
+
+--------------------------------------------------
+6. FILES
+--------------------------------------------------
+website-design/
+  index.html            Home / coming-soon landing (aligned to reference)
+  pricing.html          Pricing page
+  about.html            About page
+  blog.html             Blog / resources
+  contact.html          Contact / demo
+  login.html            Login / signup
+  logo-showcase.html    Logo options preview
+  styles.css            Shared design system (custom CSS version)
+  design-spec.md        Design specification
+  website-structure.txt This file
+  .gitignore
+  logo.svg              Placeholder logo (P mark)
+  logo-primary.svg      Logo option A
+  logo-monogram.svg     Logo option B
+  logo-spark.svg        Logo option C
+
+--------------------------------------------------
+7. NOT YET DONE / OPEN ITEMS
+--------------------------------------------------
+- Logo: user designing themselves; placeholder mark in header/footer
+- Contact form + signup-website form: not yet wired to Web3Forms
+- Images: Unsplash placeholders; replace with real assets
+- Custom domain www.proximi.in: DNS CNAME -> kiran416ind-bot.github.io
+- GitHub Pages: enable in repo settings (main / root)
+- Access key security: keep repo private or restrict domain on Web3Forms
+--------------------------------------------------
